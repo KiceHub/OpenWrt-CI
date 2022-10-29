@@ -41,7 +41,7 @@ jobs:
           cd ..
           cp .config ./lede/.config
           mv ./lede/* ./
-          rm ./package/lean/r8152/*
+          rmdir ./package/lean/r8152
           mv ./change/r8152/* ./package/lean/r8152/
       - name: Install Helloword
         run: |
