@@ -35,7 +35,10 @@ jobs:
           sudo -E apt-get clean
       - name: Download lede
         run: |
-          git clone https://github.com/coolsnowwolf/lede/tree/e4ba63a992a99c16274e6ddb20dd8e0f3baf368c
+          git clone https://github.com/coolsnowwolf/lede
+          cd ./lede/
+          git checkout e4ba63a992a99c16274e6ddb20dd8e0f3baf368c
+          cd ..
           cp .config ./lede/.config
           mv ./lede/* ./
       - name: Install Helloword
