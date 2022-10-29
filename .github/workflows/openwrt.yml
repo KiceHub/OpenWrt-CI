@@ -36,12 +36,10 @@ jobs:
       - name: Download lede
         run: |
           git clone https://github.com/coolsnowwolf/lede
-          cd ./lede/
-          git checkout e4ba63a992a99c16274e6ddb20dd8e0f3baf368c
-          cd ..
-          rm ./lede/package/lean/r8152/patches/010-compat-skb_mark_not_on_list-was-backported-since-ker.patch
           cp .config ./lede/.config
           mv ./lede/* ./
+          git checkout e4ba63a992a99c16274e6ddb20dd8e0f3baf368c
+          rm ./package/lean/r8152/patches/010-compat-skb_mark_not_on_list-was-backported-since-ker.patch
       - name: Install Helloword
         run: |
           echo "src-git helloworld https://github.com/fw876/helloworld" >> ./feeds.conf.default 
