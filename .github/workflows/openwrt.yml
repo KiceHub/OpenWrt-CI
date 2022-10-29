@@ -37,12 +37,12 @@ jobs:
         run: |
           git clone https://github.com/coolsnowwolf/lede
           cd ./lede/
-          git checkout e4ba63a992a99c16274e6ddb20dd8e0f3baf368c
+          #git checkout e4ba63a992a99c16274e6ddb20dd8e0f3baf368c
           cd ..
           cp .config ./lede/.config
           mv ./lede/* ./
-          rm -rf ./package/lean/r8152/*
-          mv ./change/r8152/* ./package/lean/r8152/
+          #rm -rf ./package/lean/r8152/*
+          #mv ./change/r8152/* ./package/lean/r8152/
       - name: Install Helloword
         run: |
           echo "src-git helloworld https://github.com/fw876/helloworld" >> ./feeds.conf.default 
